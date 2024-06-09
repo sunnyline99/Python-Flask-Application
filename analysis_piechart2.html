@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<title>IFRS16</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+	<header class="header full">
+
+		<div class="full header_bottom">
+
+			<div class="center">
+				
+				<div class="header_bottom_in full">
+					
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="home">Home</a>
+							</li>
+
+							<li>
+								<a href="create_contract">Create Contract</a>
+							</li>
+ 
+							<li>
+								<a href="contract_overview">Contract Overview</a>
+							</li>
+
+							<li>
+								<a href="admin_panel">Admin Panel</a>
+							</li>
+
+							<li>
+								<a href="analyses">Analyses</a>
+							</li>
+
+							<li>
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a href="#" class="sign_up">Sign up / Log in</a>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+  
+  <head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<html>
+
+  <body>
+	<div class="row">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('pie_cat', 'pie_cat');
+        data.addColumn('pie_num', 'pie_num');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+		  data.addRow([
+		  {% for i in pie_cat %}
+		  "["&{{row.0}}&","&99&"]"
+		  {% endfor %}
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+	</div>
+  </body>
+</html>

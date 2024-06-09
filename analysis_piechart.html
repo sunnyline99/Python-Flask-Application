@@ -1,0 +1,120 @@
+<head>
+
+	<meta charset="utf-8" />
+	<title>IFRS16</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<meta charset="utf-8" />
+	<title>IFRS16</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/lists.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+	<header class="header full">
+
+		<div class="full header_bottom">
+
+			<div class="center">
+				
+				<div class="header_bottom_in full">
+					
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="home">Home</a>
+							</li>
+
+							<li>
+								<a href="create_contract">Create Contract</a>
+							</li>
+ 
+							<li>
+								<a href="contract_overview">Contract Overview</a>
+							</li>
+
+							<li>
+								<a href="admin_panel">Admin Panel</a>
+							</li>
+
+							<li>
+								<a href="analyses">Analyses</a>
+							</li>
+
+							<li>
+								<a href="contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a href="login" class="sign_up">Log in</a>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+  
+
+<!doctype html>
+<html>
+   <body>
+
+      <h1>Contracts structure and payments in PLN over time</h1>
+	  
+
+      <p>{{ name }}</p>
+
+  <img  src="data:image/png;base64, {{ plot_url }}">
+  <img  src="data:image/png;base64, {{ plot_url2 }}">
+
+	<div class="table-responsive" id="sailorTableArea">
+    <table id="sailorTable" class="table table-striped table-bordered" width="90%">
+	
+ 
+        <thead>
+            <tr>
+                <th>Contract Name</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Monthly payment</th>
+                <th>Currency</th>
+				<th>Monthly payment in PLN</th>
+                <th>IRR</th>
+				<th>Contract Value Nominal</th>
+				<th>PV of Contract in PLN</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+			<tr>
+				<td>{{ row.0 }}</td>
+				<td>{{ row.1 }}</td>
+				<td>{{ row.2 }}</td>
+				<td>{{ row.3 }}</td>
+				<td>{{ row.10 }}</td>
+				<td>{{ row.7 }}</td>
+				<td>{{ row.11 }}</td>
+				<td>{{ row.5 }}</td>
+				<td>{{ row.6 }}</td>
+			{% endfor %}
+				
+			<tr>
+		  </tbody>
+    </table>
+    </div>
+</html>

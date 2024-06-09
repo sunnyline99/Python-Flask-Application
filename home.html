@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+
+	<meta charset="utf-8" />
+	<title>IFRS16</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+	<header class="header full">
+
+		<div class="full header_bottom">
+
+			<div class="center">
+				
+				<div class="header_bottom_in full">
+					
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="home">Home</a>
+							</li>
+
+							<li>
+								<a href="create_contract">Create Contract</a>
+							</li>
+ 
+							<li>
+								<a href="contract_overview">Contract Overview</a>
+							</li>
+
+							<li>
+								<a href="admin_panel">Admin Panel</a>
+							</li>
+
+							<li>
+								<a href="analyses">Analyses</a>
+							</li>
+
+							<li>
+								<a href="contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a href="login" class="sign_up">Log in</a>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+	
+	<html>
+  <head>
+    <style>
+      .alert-error {
+        padding: 8px;
+        background-color: red;
+        color: white;
+      }
+	  .alert-info {
+	background-color: green;
+	color: black;
+}
+    </style>
+  </head>
+  <body>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert alert-{{category}}">{{ message }}</div>
+    {% endfor %}
+  </body>
+</html>
+
+<form class="input" method="post" action="#" name="mainform">
+	<main class="full">
+		
+		<section class="full about_us" id="about_us">
+			<div class="center">
+				<h2 class="full about_us_title">About us</h2>
+
+				<div class="full wwa_box">
+					<h3 class="full wwa">Who We Are</h3>
+
+					<p class="full">BH-DSC is a web development company based in Warsaw, PL. We provide web development and <br/> analytical services.
+						<span class="stars">*****</span>
+					</p>
+				</div>
+
+				<h3 class="full wwa wwd">What We Do</h3>
+
+				<ul class="full wwd_list">
+					<li>
+						<span class="full wwd_icon wwd_icon_1"></span>
+
+						<h4>Analytics</h4>
+						<p>We make simple and intuitive interfaces,to provide the best user experience.</p>
+					</li>
+
+					<li>
+						<span class="full wwd_icon wwd_icon_2"></span>
+
+						<h4>Web development</h4>
+						<p>We create beautiful websites and 
+innovative web applications.</p>
+					</li>
+
+					<li>
+						<span class="full wwd_icon wwd_icon_3"></span>
+
+						<h4>Marketing</h4>
+						<p>Constant consumer engagement, 
+tracking through social media 
+platforms.</p>
+					</li>
+				</ul>
+	<div class="sign_up read_more">>
+				<button type="submit"><span class="sign_up read_more"></span>Logout</button>
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+</body>
+</html>

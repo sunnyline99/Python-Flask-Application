@@ -1,0 +1,175 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+	<meta charset="utf-8" />
+	<title>IFRS16</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+	<header class="header full">
+
+		<div class="full header_bottom">
+
+			<div class="center">
+				
+				<div class="header_bottom_in full">
+					
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="home">Home</a>
+							</li>
+
+							<li>
+								<a href="create_contract">Create Contract</a>
+							</li>
+ 
+							<li>
+								<a href="contract_overview">Contract Overview</a>
+							</li>
+
+							<li>
+								<a href="admin_panel">Admin Panel</a>
+							</li>
+
+							<li>
+								<a href="analyses">Analyses</a>
+							</li>
+
+							<li>
+								<a href="contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a href="login" class="sign_up">Log in</a>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+
+<div class="container">
+	<div class="row">
+		<h2>Pick action</h2>
+	</div>
+    
+    <div class="row">
+    
+    <div class="col-md-6">       <!-- Standard button -->
+<a href="add_user" class="sign_up read_more">Add User</a>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<a href="add_cat" class="sign_up read_more">Add Category</a>
+
+</div>
+    
+ 
+    </div>
+    
+    
+</div>
+
+	<div class="container">
+	</br>
+		
+			<div class="main">
+				<div class="main-center">
+				</br>
+				<html>
+  <head>
+    <style>
+      .alert-error {
+        padding: 8px;
+        background-color: red;
+        color: white;
+      }
+	  .alert-info {
+	background-color: green;
+	color: black;
+}
+    </style>
+  </head>
+  <body>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert alert-{{category}}">{{ message }}</div>
+    {% endfor %}
+  </body>
+</html>
+
+				
+				<h5></br>ADD USER</h5>
+					<form class="input" method="post" action="#" name="mainform">
+					
+					<div class="form-group">
+							<label for="username">Username</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter username" required/>
+								</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password">Password</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input required type="password" class="form-control" name="password" placeholder="Enter password"/>
+								</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="Nam">Name</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input required type="text" class="form-control" name="Nam" placeholder="Enter name"/>
+								</div>
+						</div>
+						
+						
+						<div class="form-group">
+							<label for="Sur">Surname</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input required type="text" class="form-control" name="Sur" placeholder="Enter surname"/>
+								</div>
+						</div>
+						
+							<div class="select">
+							<label for="Job">Job typle</label>
+							</br>
+							<body>
+							<select name="Job" id="Job" form_id="Job">
+							
+							<option value = "admin">admin</option>
+							<option value = "modifier">modifier</option>
+							
+							</select>
+							</body>
+							</br>
+							</br>
+						
+						<button type="submit"><span class="button"></span>ADD USER</button>
+					
+				
+					</form>
+				</div><!--main-center"-->
+			</div><!--main-->
+		</div><!--container-->	

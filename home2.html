@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+
+	<meta charset="utf-8" />
+	<title>PSD to html</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+
+	<header class="header full">
+
+		<div class="full header_bottom">
+
+			<div class="center">
+				
+				<div class="header_bottom_in full">
+					
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="home">Home</a>
+							</li>
+
+							<li>
+								<a href="create_contract">Create Contract</a>
+							</li>
+ 
+							<li>
+								<a href="contract_overview">Contract Overview</a>
+							</li>
+
+							<li>
+								<a href="admin_panel">Admin Panel</a>
+							</li>
+
+							<li>
+								<a href="analyses">Analyses</a>
+							</li>
+
+							<li>
+								<a href="contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a href="login" class="sign_up">Log in</a>
+				</div>
+
+			</div>
+		</div>
+
+	</header>
+	
+	<html>
+  <head>
+    <style>
+      .alert-error {
+        padding: 8px;
+        background-color: red;
+        color: white;
+      }
+	  .alert-info {
+	background-color: green;
+	color: black;
+}
+    </style>
+  </head>
+  <body>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert alert-{{category}}">{{ message }}</div>
+    {% endfor %}
+  </body>
+</html>
+
+
+	<div class="container">
+	</br>
+		
+		
+				
+				<button type="submit" class="input" method="post" action="" name="mainform" ><span class="button"></span>LOG OUT BY CLICKING THE BUTTON</button>
+
+				</div><!--main-center"-->
+			</div><!--main-->
+		</div><!--container-->	
